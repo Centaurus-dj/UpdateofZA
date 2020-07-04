@@ -33,6 +33,8 @@ default money = 0 #The money we have at start
 default hour = 5 #The hour we begin the game
 default pass_intro = None #variable defined to see if we pass intro
 default res_icons = False #variable for the Main Menu icons or buttons
+default tooltip_var = "activated"
+
 if hour == 5:
     $ dtime = 0 #We update the time at Early Morning
 elif hour == 7:
