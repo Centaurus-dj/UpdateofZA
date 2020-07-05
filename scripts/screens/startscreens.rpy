@@ -204,17 +204,6 @@ This devlog is written by Centaurus
 
 
 
-label splashscreen:
-    define persistent.user = "developper"
-    if persistent.user == "tester":
-        call screen Warn_Vers()
-    elif persistent.user == "player":
-        if langcheck == False:
-            call screen What_lang() with fade
-        else:
-            jump showDevlog
-    elif persistent.user == "developper":
-        call screen main_menu()
 
 label ShowWhatLang:
     call screen What_lang()

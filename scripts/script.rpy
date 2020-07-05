@@ -52,6 +52,18 @@ screen map():
 label start:
     call createlog from _call_createlog_1
 
+    python:
+        inventory = Inventory()
+        spaghetti = Item("Spaghetti", 3)
+        olives = Item("Olives", 4)
+        chocolate = Item("Chocolate", 11)
+
+    "Oh, look! I found ten coins!"
+
+    $ inventory.earn(10)
+
+    $ current_money = inventory.money 
+
     $ difficulty = "Casual"
 
     if _preferences.language == None:
@@ -66,6 +78,7 @@ label start:
 
 label script_fr:
     n "i have [persistent.moneyall] €"
+    n "I have %(current_money)s €"
     scene ecran noir
     show screen Startabout()
     $ renpy.pause()
