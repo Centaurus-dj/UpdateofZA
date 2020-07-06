@@ -202,7 +202,14 @@ This devlog is written by Centaurus
                         """):
                         style "Devtext"
 
+screen Unktxt():
+    text _("Unknown Games"):
+        style "unkstyle"
 
+
+screen Prestxt():
+    text _("Presents"):
+        style "Preststyle"
 
 
 label ShowWhatLang:

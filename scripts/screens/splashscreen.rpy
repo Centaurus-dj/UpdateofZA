@@ -1,10 +1,11 @@
 label splashscreen:
     scene bg black
-    show text "Unknown Games":
-        size 40
-    $ pause.renpy(.5)
-    show text _("Presents"):
-        size 50
+    show screen Unktxt() with fade
+    $ pause.renpy(.5, hard=True)
+    hide screen Unktxt
+    show Prestxt with fade
+    $ pause.renpy(.5, hard=True)
+    hide Prestxt
     show Renpy logo at center with dissolve:
         xalign 1.0
         linear 2.0 xalign 0.5
