@@ -1,0 +1,82 @@
+
+#cuisine:
+
+u "Je suis allé voir à la cuisine si je trouvais quelque-chose d'intérésant..."
+n "Tu fouilles un peu partout, sous l'évier, dans le frigo, t'es même allé fouiller dans la poubelle..."
+u "Mais tout ça, ça a payé! J'ai trouvé..."
+hide alex
+with fade
+hide salon
+with dissolve
+show boites_de_conserves
+with dissolve
+u "deux boites de conserves"
+hide boites_de_conserves
+with dissolve
+show coca
+with dissolve
+u "Et un coca!"
+hide coca
+with dissolve
+show salon
+with dissolve
+show alex at right
+with fade
+
+#étages:
+
+u "Je décide d'aller voir ce qu'il il y a en haut..."
+hide salon
+with dissolve
+show chambre at center
+with dissolve
+u "Je monte à l'étage et je trouve deux chambres..."
+u "Il y a apparemment ma chambre et celle de ma soeur..."
+n "Hop Hop Hop!! Comment tu sais que c'est ta chambre ?"
+u "Bah c'est simple, sur une porte c'est écrit \"ma chambre\" et l'autre c'est écrit \"chambre de ma soeur\", donc ce n'est pas difficile de savoir où se trouve ma chambre!"
+n "Ta logique est imparrable... *en pensées* Mais qu'est-ce qu'il est con..."
+u "Je décide alors d'aller fouiller la mienne puis celle de ma soeur."
+hide alex
+with fade
+hide chambre
+with dissolve
+show katana
+with dissolve
+u "Je trouve un katana"
+hide katana
+with dissolve
+show chapeau
+with dissolve
+u "et un chapeau de shériff..."
+hide chapeau
+with dissolve
+show salon
+with dissolve
+show alex at right
+with fade
+u "Après ça, je redescends au salon"
+
+#toilettes:
+
+u "Je décide alors d'aller voir si je trouve quelque-chose dans les toilettes..."
+u "Arrivé je trouve"
+hide alex
+with fade
+hide salon
+with dissolve
+show magnum at right
+n "un magnum chargé"
+show munitions magnum at left
+n "et une boite de munitions!"
+hide magnum
+hide munitions magnum
+with dissolve
+show salon
+with dissolve
+show alex at right
+with fade
+
+#garage:
+
+u "Je décide du coup d'aller fouiller le garage..."
+n "Ca ne t'as pas rapporté grand chose à part savoir qu'il y a une voiture dans le garage et que tu ne peux pas la conduire car tu n'as pas la CLÉ!!!"

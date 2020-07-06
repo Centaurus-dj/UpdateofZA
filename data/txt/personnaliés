@@ -1,0 +1,16 @@
+Maximilian:
+
+points sympathie >= 25
+
+max "Je n'aime pas trop parler de ma vie..."
+
+points sympathie >= 50
+
+max "Avant j'étais un tireur d'élite dans l'armée Française..."
+u "Et ?"
+max "Désolé mais je préfère ne rien raconter de plus..."
+"Il faudrait que Maximilian ait plus confiance en moi..."
+
+points sympathie >= 75
+
+max "Je me suis engagé dans l'armée après l'attentat en 2001 qui a tué ma femme..."

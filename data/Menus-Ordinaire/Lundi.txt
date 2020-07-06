@@ -1,0 +1,22 @@
+  ____________________________________
+  |_____________Matin________________|
+  |Boisson :  Jus d'orange           |
+  |Plat :     Des croissants avec    |
+  |  de la brioche et un café        |
+  |Dessert :  Un yaourt              |
+  |__________________________________|
+Des aubergines farcies
+  ____________________________________
+  |_____________Midi_________________|
+  |Boisson :  Eau                    |
+  |Plat :     De la salade           |
+  |  avec des carottes rappées       |
+  |Dessert :  Un yaourt              |
+  |__________________________________|
+
+  ____________________________________
+  |_____________Soir_________________|
+  |Boisson :  Eau                    |
+  |Plat :     Une soupe de poireaux  |
+  |Dessert :  Un yaourt              |
+  |__________________________________|
