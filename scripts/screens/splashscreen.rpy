@@ -1,4 +1,5 @@
 label splashscreen:
+    show newMathneutre
     scene bg black
     show screen Unktxt() with fade
     $ pause.renpy(.5, hard=True)

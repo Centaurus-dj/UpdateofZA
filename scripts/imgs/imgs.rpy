@@ -1,6 +1,6 @@
 init -3:
     #Images
-
+    image newMathneutre = "pose_Math_neutre.png"
     image zya = "zya.png"
     image side zya_side = "SideImages/zya_side"
     image ass = "ass.png"
