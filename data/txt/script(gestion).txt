@@ -1,0 +1,187 @@
+
+#script gestion:
+define e = Character("étranger", color="#08d367")
+#DEFAULT VARIABLES
+default dtime = 0
+default day = 0
+default money = 0
+
+#Game Variables
+default maxlove = 0
+default maxsus = 0
+default mainstory = 0
+default zyalove = 0
+default zyasus = 0
+default mathildelove = 0
+default mathildesus = 0
+default hangarkey = 0
+default housekey = 0
+
+$ hangarkey = false
+$ housekey = false
+
+init python:
+    class Item:
+        def __init__(self, name, cost):
+            self.name = name
+            self.cost = cost
+
+    class Inventory:
+        def __init__(self, money=10):
+            self.money = money
+            self.items = []
+
+        def buy(self, item):
+            if self.money >= item.cost:
+                self.money -= item.cost
+                self.items.append(item)
+                return True
+            else:
+                return False
+
+        def earn(self, amount):
+            self.money += amount
+
+        def has_item(self, item):
+                if item in self.items:
+                    return True
+                else:
+                    return False
+
+label starting:
+
+    python:
+        inventory = Inventory()
+        spaghetti = Item("Spaghetti", 3)
+        olives = Item("Olives", 4)
+        chocolate = Item("Chocolate", 11)
+
+    "Oh, look! I found ten coins!"
+
+    $ inventory.earn(10)
+
+    $ current_money = inventory.money
+
+    "Now I have %(current_money)d coins."
+
+    "My stomach growls loudly."
+
+    if inventory.buy(chocolate):
+        "Mmm, chocolate. I'll save that for later... "
+    else:
+       "Not enough money... "
+
+    "Suddenly, I feel hungry."
+
+    jump preshop
+    jump shop2
+
+    if inventory.has_item(chocolate):
+        "Good thing I bought that chocolate earlier."
+    else:
+        "If only I had some chocolate..."
+
+label preshop:
+    $ spaghetticost = spaghetti.cost
+    $ olivescost = olives.cost
+    $ chocolatecost = chocolate.cost
+label shop2:
+menu:
+    "I go into the store."
+      "Buy spaghetti for %(spaghetticost)d coins.":
+            if inventory.buy(spaghetti):
+                "Hey, those are uncooked. I can't eat those yet!"
+                jump game_continues
+
+        "Buy olives for %(olivescost)d coins.":
+            if inventory.buy(olives):
+                "I hate olives."
+                "And they cost more than the spaghetti."
+                "But at least I don't have to cook them... "
+                jump game_continues
+
+        "Buy chocolate for %(chocolatecost)d coins.":
+            if inventory.buy(chocolate):
+                "Mmmm, dark semi-sweet chocolate! My favorite!"
+                jump game_continues
+
+        "Buy nothing.":
+            jump game_continues
+
+label fallthrough:
+     "Not enough money..."
+    jump shop2
+
+label game_continues:
+    "And so I left the store."
+    $ current_money = inventory.money
+    "I have %(current_money)d left"
+
+
+#Texte en Français:
+
+python:
+inventory= Inventory()
+spaghetti = Item("Spaghetti", 3)
+olives = Item("Olives", 4)
+chocolate = Item("Chocolate", 11)
+
+"Oh, regarde! J'ai trouvé 10 euros"
+$ inventory.earn(10)
+
+$ current_money = inventory.money
+
+"J'ai maintenant %(current_money)d d'euros."
+
+"Mon estomac gronde lourdement."
+
+if inventory.buy(chocolate):
+"Mmm, chocolat. Je vais garder ça pour plus tard... "
+else:
+"Je n'ai pas assez d'argent... "
+
+"Soudainement, j'ai faim..."
+
+jump preshop
+jump shop2
+
+if inventory.has_item(chocolate):
+"Bonne chose, j'avais acheté ce chocolat un peu plus tôt."
+else:
+"Si seulement j'avais du chocolat..."
+
+label preshop:
+$ spaghetticost = spaghetti.cost
+$ olivescost = olives.cost
+$ chocolatecost = chocolate.cost
+label shop2:
+menu:
+"Je rentre dans le magasin."
+"Acheter des spaghetti pour %(spaghetticost)d euros.":
+    if inventory.buy(spaghetti):
+        "Hé, ils ne sont pas cuits. Je ne peux pas y manger pour l'instant!"
+        jump game_continues
+
+"Acheter des olvies pour %(olivescost)d euros.":
+    if inventory.buy(olives):
+        "Je déteste les olives !"
+        "Et en plus, elles coutent plus chères que les spaghetti !"
+        "Mais au moins, je n'ai pas besoin de les cuire..."
+        jump game_continues
+
+"Acheter du choclat pour %(chocolatecost)d euros.":
+    if inventory.buy(chocolate):
+        "Mmm, noir semi-sweet chocolat! Mon favori !"
+        jump game_continues
+
+"Ne rien acheter.":
+    jump game_continues
+
+label fallthrough:
+"Je n'ai pas assez d'argent..."
+jump shop2
+
+label game_continues:
+"Et donc, je quitte le magasin."
+$ current_money = inventory.money
+"J'ai %(current_money)d euros qui me restent"
