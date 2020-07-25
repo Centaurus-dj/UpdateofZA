@@ -1,6 +1,6 @@
-screen transitions_startfr():
+screen transitions_text(txt):
     vbox:
         style "reshist_style_place"
 
-        text _("Tu te réveilles ..."):
+        text _(txt):
             style "reshist_style_size"
