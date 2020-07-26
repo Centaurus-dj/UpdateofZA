@@ -25,12 +25,8 @@ label start:
         olives = Item("Olives", 4)
         chocolate = Item("Chocolate", 11)
 
-    "Oh, look! I found ten coins!"
-
     $ inventory.earn(10)
-
     $ current_money = inventory.money
-
     $ difficulty = "Casual"
 
     if _preferences.language == None:

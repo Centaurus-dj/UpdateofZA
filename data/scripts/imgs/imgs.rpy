@@ -160,10 +160,10 @@ image devbarsepar = im.Scale("data/images/pc/bars/devbar_separated.png", 600, 10
 #Logo imgs
 image test = "logo_main_menu.png"
 image test_hover = "logo_main_menu_hover.png"
-image fr_icon = "/data/images/pc/icons/lang/french/fr.png"
-image fr_icon_hov = "/data/images/pc/icons/lang/french/fr_hover.png"
-image en_icon = "/data/images/pc/icons/lang/english/en.png"
-image en_icon_hov = "/data/images/pc/icons/lang/english/en_hover.png"
+image fr_icon = im.Scale("/data/images/pc/icons/lang/french/fr.png", 60, 40)
+image fr_icon_hov = im.Scale("/data/images/pc/icons/lang/french/fr_hover.png", 60, 40)
+image en_icon = im.Scale("/data/images/pc/icons/lang/english/en.png", 60, 40)
+image en_icon_hov = im.Scale("/data/images/pc/icons/lang/english/en_hover.png", 60, 40)
 image de_icon = "/data/images/pc/icons/lang/deutsch/de.png"
 image de_icon_hov = "/data/images/pc/icons/lang/deutsch/de_hover.png"
 image logo_new = "gui/studio_icon.png"

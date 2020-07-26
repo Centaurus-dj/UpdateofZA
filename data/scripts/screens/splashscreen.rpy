@@ -1,4 +1,5 @@
 label splashscreen:
+    return
     default persistent.user = "player"
     scene bg black
     show screen Unktxt() with fade

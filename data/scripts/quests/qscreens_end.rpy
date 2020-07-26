@@ -3,12 +3,16 @@ screen notify_quest(title):
         style "QuestNotifFrame"
         vbox:
             style "QuestNotifVbox"
-            text _(title)
+            text _(title):
+                style "QuestTitle"
 
-            text _("Test")
+            text _("Test"):
+                style "NotifyText"
+
+    timer 3.0 action Hide("notify_quest", transition=fade)
 
 style QuestNotifFrame:
-    background "#ffffff"
+    background "gui/questend.png"
     xsize 500
     ysize 300
     xalign .9
@@ -19,3 +23,19 @@ style QuestNotifVbox:
     color "#ffffff"
     xsize 298
     ysize 248
+
+style QuestTitle:
+    size 40
+    xalign .5
+    yalign .4
+
+style NotifyText:
+    size 30
+    xalign .15
+    yalign .2
+
+style lang_choice:
+    background "gui/langchoice.png"
+    xsize 200
+    ysize 50
+    xoffset -10

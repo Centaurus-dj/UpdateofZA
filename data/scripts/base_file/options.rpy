@@ -29,13 +29,16 @@ define gui.show_name = False
 
 
 ## La version du jeu.
-
-define current.version = "2.1"
-define config.version = "2.1"
-
+if _preferences.language == None or _preferences.language == "english":
+    define current.version = "2.1"
+    define config.version = "2.1"
+else:
+    pass
 ##Le statut du jeu.
-define current.statement = "Work in Progress"
-
+if _preferences.language == None or _preferences.language == "english":
+    define current.statement = "Work in Progress"
+else:
+    pass
 
 ##### THIS IS THE CODE FOR THE MOUSE, I use 100 x 100 as default for the mouse pointer but you can make it smaller
 
